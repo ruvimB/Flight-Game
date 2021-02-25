@@ -39,10 +39,10 @@ class GameViewController: UIViewController {
         // Get a scene with the ship
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
         
-//      Find ship in the scene
+        //Find ship in the scene
         ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
         
-//      Set ship coordinates
+        //Set ship coordinates
         let x = Int.random(in: -25 ... 25)
         let y = Int.random(in: -25 ... 25)
         let z = -105
@@ -70,10 +70,10 @@ class GameViewController: UIViewController {
             }
         }
         
-//      Get the scene
+        // Get the scene
         let scnView = self.view as! SCNView
 
-//        Add ship to the scene
+        // Add ship to the scene
         if let ship = ship {
         scnView.scene?.rootNode.addChildNode(ship)
         }
